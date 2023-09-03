@@ -1,0 +1,82 @@
+main {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.player-cards-area, .opponent-cards-area, .playing-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    /* background-color: green; */
+    position: relative;
+    height: 35%;
+}
+
+.playing-area {
+    height: 25%;
+}
+
+.image-container {
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    transform-origin: 50% 100%;
+    background: radial-gradient(
+        transparent, rgba(0, 0, 0, .7)
+    );
+}
+
+img {
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 40px black;
+}
+
+.playing-area > .image-container {
+    height: 125%;
+    color: rgba(244, 244, 244, .7);
+    padding: 5px;
+    border: 1px solid rgba(178, 229, 85);
+    border-inline: 3px solid rgb(178, 229, 85);
+    overflow: hidden;
+}
+
+.playing-area > .leading-card {
+    position: relative;
+}
+
+.playing-area > .computer-card {
+    right: 110%;
+    width: 100%;
+    border-color: rgb(255, 136, 0);
+}
+.playing-area > .player-card {
+    left: 110%;
+    width: 100%;
+    border-color: rgb(100, 172, 18);
+}
+
+h2 {
+    font-size: x-large;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.card {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.card:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
